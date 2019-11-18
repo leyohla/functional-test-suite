@@ -9,6 +9,7 @@ import java.awt.*;
 
 public class LoginPageUI {
     public static void main(String args[]){
+        System.setProperty("webdriver.chrome.driver", "C:/Users/lhunn/IdeaProjects/functional-test-suite/src/main/libs/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
 
         try{
@@ -21,9 +22,6 @@ public class LoginPageUI {
     }
 
     public static void LoginPage(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement Heading = wait.until(ExpectedConditions.visibilityOf((WebElement) By.className("auth-header")));
-        driver.findElement(By.className("auth-header"));
 
     }
     public static final TextField Heading = new TextField("Login Form");
@@ -32,11 +30,5 @@ public class LoginPageUI {
 
     public static final TextField passwordField = new TextField("Password");
 
-    /*public static void login(WebDriver driver){
-        if(driver.getPageSource().contains("Login Form")){
-        }
-
-        driver.getPageSource().contains("Login Form");
-    }*/
 
 }

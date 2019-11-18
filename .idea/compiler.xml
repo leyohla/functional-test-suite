@@ -9,8 +9,8 @@
         <module name="functional-test-suite" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="functional-test-suite" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="functional-test-suite" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
