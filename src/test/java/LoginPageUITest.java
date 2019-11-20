@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// Login Page UI Elements Test
-// Open the login page and write assertions to ensure everything looks OK on that page. i.e. add assertions to ensure all the fields, labels and all other items exist.
+/*  Login Page UI Elements Test
+    Open the login page and write assertions to ensure everything looks OK on that page. i.e. add assertions to ensure all the fields, labels and all other items exist. */
 
 public class LoginPageUITest extends LoginPageUI {
 
@@ -80,10 +80,6 @@ public class LoginPageUITest extends LoginPageUI {
 
 
 //for the data driven tests:
-//WebElement TextboxContent = driver.findElement(By.cssSelector(".auth-header"));
-//TextboxContent.getText();
-//assertEquals(".auth-header", TextboxContent);
-
-//Assert.assertEquals("Login Fgdrm", true, true);
-//Assert.assertEquals("Userngsede", true, true);
-//Assert.assertEquals("Passwue", true, true);
+//  WebElement TextboxContent = driver.findElement(By.cssSelector(".auth-header"));
+//  TextboxContent.getText();
+//  assertEquals(".auth-header", TextboxContent);

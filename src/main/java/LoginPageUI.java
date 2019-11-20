@@ -33,6 +33,8 @@ public class LoginPageUI {
     }
     public static void Password(WebDriver driver){
     }
+    public static void LoginButton(WebDriver driver){
+    }
 
     public static final TextField Heading = new TextField("Login Form");
 

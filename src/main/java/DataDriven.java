@@ -3,7 +3,13 @@ public class DataDriven {
 
     }
 
-    public void LoginVerification(){
+    public static void LoginButton(){
+
+    }
+    public static void UsernameVerification() {
+
+    }
+    public static void PasswordVerification() {
 
     }
 }
