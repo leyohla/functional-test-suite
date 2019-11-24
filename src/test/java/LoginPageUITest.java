@@ -21,9 +21,6 @@ public class LoginPageUITest extends LoginPageUI {
     @Before
         public void SetUp(){
         System.setProperty("webdriver.chrome.driver", "C:/Users/lhunn/IdeaProjects/functional-test-suite/src/main/libs/chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
-        driver.get(LOGINPAGE);
-        driver.manage().window().maximize();
     }
 
     @Test
@@ -31,46 +28,41 @@ public class LoginPageUITest extends LoginPageUI {
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         assertTrue(driver.getPageSource().contains("Login Form"));
-        driver.quit();
     }
     @Test
     public void toggleButton(){
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         assertTrue(driver.getPageSource().contains("logo-w"));
-        driver.quit();
     }
     @Test
     public void Username(){
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         assertTrue(driver.getPageSource().contains("Username"));
-        driver.quit();
     }
     @Test
     public void Password(){
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         assertTrue(driver.getPageSource().contains("Password"));
-        driver.quit();
     }
     @Test
     public void LoginButton(){
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         assertTrue(driver.getPageSource().contains("Log In"));
-        driver.quit();
     }
     @Test
     public void TickBox(){
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         assertTrue(driver.getPageSource().contains("Remember Me"));
-        driver.quit();
     }
     @After
     public void setDown(){
-       // driver.quit();
+        ChromeDriver driver = new ChromeDriver();
+        driver.quit();
     }
 
 

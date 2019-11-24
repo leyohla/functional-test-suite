@@ -1,6 +1,8 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,21 +20,24 @@ public class DataDrivenTest extends LoginPageUI {
     @Before
     public void SetUp(){
         System.setProperty("webdriver.chrome.driver", "C:/Users/lhunn/IdeaProjects/functional-test-suite/src/main/libs/chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
-        driver.get(LOGINPAGE);
-        driver.manage().window().maximize();
+    }
+    @Test
+    public void Errors(){
+
+        assertTrue(true,"something happens here");
     }
 
     @Test
-    public void UsernameVerification(){
+    public void UsernameVerification() throws Exception{
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         WebElement username = driver.findElement(By.cssSelector("#username"));
         username.sendKeys("username@user.com");
         //driver.quit();
     }
+
     @Test
-    public void PasswordVerification(){
+    public void PasswordVerification() throws Exception{
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         WebElement password = driver.findElement(By.cssSelector("#password"));
@@ -40,10 +45,16 @@ public class DataDrivenTest extends LoginPageUI {
         //driver.quit();
     }
     @Test
-    public void LoginButton(){
+    public void LoginButton() throws Exception{
         ChromeDriver driver = new ChromeDriver();
         driver.get(LOGINPAGE);
         WebElement loginButton = driver.findElement(By.cssSelector("#log-in"));
         loginButton.click();
+
+    }
+    @After
+    public void postTest(){
+        ChromeDriver driver = new ChromeDriver();
+        driver.quit();
     }
 }

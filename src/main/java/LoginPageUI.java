@@ -9,8 +9,8 @@ import java.awt.*;
 
 public class LoginPageUI {
     public static final String LOGINPAGE = "https://demo.applitools.com/hackathon.html";
-    WebDriver driver;
 
+    WebDriver driver;
 
     public static void main(String args[]){
         System.setProperty("webdriver.chrome.driver", "C:/Users/lhunn/IdeaProjects/functional-test-suite/src/main/libs/chromedriver.exe");
