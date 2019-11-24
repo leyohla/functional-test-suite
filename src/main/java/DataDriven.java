@@ -16,6 +16,8 @@ public class DataDriven extends LoginPageUI {
     }
 
     public void UsernameVerification() {
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(LOGINPAGE);
         WebElement username = driver.findElement(By.cssSelector("#username"));
         username.sendKeys("username@user.com");
     }

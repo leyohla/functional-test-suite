@@ -1,9 +1,11 @@
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -22,10 +24,12 @@ public class DataDrivenTest extends LoginPageUI {
         System.setProperty("webdriver.chrome.driver", "C:/Users/lhunn/IdeaProjects/functional-test-suite/src/main/libs/chromedriver.exe");
     }
     @Test
-    public void Errors(){
-
-        assertTrue(true,"something happens here");
+    public void test(){
+        DataDriven test = new DataDriven();
+        test.UsernameVerification();
+        assertEquals("#username", test);
     }
+    //need to assert that the method contents compare equal.
 
     @Test
     public void UsernameVerification() throws Exception{
