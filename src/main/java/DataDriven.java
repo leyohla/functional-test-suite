@@ -3,6 +3,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DataDriven extends LoginPageUI {
+    public By Username = By.cssSelector("#username");
+    public String usernm = "username@username.com";
+
     public static void main(String args[]){
         System.setProperty("webdriver.chrome.driver", "C:/Users/lhunn/IdeaProjects/functional-test-suite/src/main/libs/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
@@ -14,6 +17,12 @@ public class DataDriven extends LoginPageUI {
             driver.quit();
         }
     }
+
+
+    public void getUsername(){
+        driver.findElement(By.cssSelector("#username"));
+    }
+
 
     public void UsernameVerification() {
         ChromeDriver driver = new ChromeDriver();

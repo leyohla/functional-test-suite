@@ -2,14 +2,11 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 /*Test the following login functionality by entering different values to username and password fields.
         If you don’t enter the username and password and click the login button, it should throw an error
@@ -18,6 +15,9 @@ import static org.junit.jupiter.api.Assertions.*;
         If you enter both username (any value) and password (any value), it should log you in.*/
 
 public class DataDrivenTest extends LoginPageUI {
+    public By Username = By.cssSelector("#username");
+    public String usernm = "username@username.com";
+
 
     @Before
     public void SetUp(){
@@ -26,10 +26,16 @@ public class DataDrivenTest extends LoginPageUI {
     @Test
     public void test(){
         DataDriven test = new DataDriven();
-        test.UsernameVerification();
-        assertEquals("#username", test);
+        test.getUsername();
+        assertEquals(By.cssSelector("#username"), Username);
     }
     //need to assert that the method contents compare equal.
+
+   /* public void getUsername(){
+        driver.findElement(getUsername.click());
+        driver.sendKeys(usernm);
+    }*/
+
 
     @Test
     public void UsernameVerification() throws Exception{
