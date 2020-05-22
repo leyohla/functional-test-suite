@@ -14,7 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.jupiter.api.Assertions.*;
 
 /*  Login Page UI Elements Test
-    Open the login page and write assertions to ensure everything looks OK on that page. i.e. add assertions to ensure all the fields, labels and all other items exist. */
+    Open the login page and write assertions to ensure everything looks OK on that page. i.e. add assertions to ensure all the fields,
+    labels and all other items exist. */
 
 public class LoginPageUITest extends LoginPageUI {
 
